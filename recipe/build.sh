@@ -14,6 +14,7 @@ cmake \
     ${CMAKE_ARGS}
 
 cmake --build . --config Release
-cmake --build . --target test --config Release
+if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
+    cmake --build . --target test --config Release
+fi
 cmake --build . --target install --config Release
-
