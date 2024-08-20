@@ -12,7 +12,7 @@ source:
   folder: src
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win]
 
 requirements:
@@ -20,6 +20,7 @@ requirements:
     - cmake
     - make  # [not win]
     - {{ compiler('fortran') }}
+    - {{ stdlib('c') }}
 
 test:
   commands:
