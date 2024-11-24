@@ -12,13 +12,12 @@ source:
   folder: src
 
 build:
-  number: 0
-  skip: true  # [win]
+  number: 1
 
 requirements:
   build:
     - cmake
-    - make  # [not win]
+    - make
     - {{ compiler('fortran') }}
     - {{ stdlib('c') }}
 
