@@ -18,7 +18,8 @@ requirements:
   build:
     - cmake
     - make
-    - {{ compiler('fortran') }}
+    - gfortran  # [win]
+    - {{ compiler('fortran') }}  # [not win]
     - {{ stdlib('c') }}
 
 test:
