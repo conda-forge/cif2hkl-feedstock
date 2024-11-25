@@ -19,11 +19,16 @@ requirements:
     - cmake
     - make
     - m2w64-gcc-fortran  # [win]
+    - m2w64-gcc-libgfortran  # [win]
+    - m2w64-gcc-libs-core  # [win]
     - {{ compiler('fortran') }}  # [not win]
     - {{ stdlib('c') }}
+    ignore_run_exports_from:
+      -  vc14_runtime  # [win]
+      -  ucrt  # [win]
   run:
     - m2w64-gcc-libgfortran  # [win]
-
+    - m2w64-gcc-libs-core  # [win]
 
 test:
   commands:
