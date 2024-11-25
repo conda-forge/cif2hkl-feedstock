@@ -18,9 +18,12 @@ requirements:
   build:
     - cmake
     - make
-    - gfortran  # [win]
+    - m2w64-gcc-fortran  # [win]
     - {{ compiler('fortran') }}  # [not win]
     - {{ stdlib('c') }}
+  run:
+    - m2w64-gcc-libgfortran  # [win]
+
 
 test:
   commands:
