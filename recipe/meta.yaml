@@ -1,4 +1,4 @@
-{% set version = "1.4.7" %}
+{% set version = "1.5.0" %}
 {% set sha_value = "ccb229a7a76e66ad6f43c8c3b47242b24243379d8588a94cbb1151a939f01b1c" %}
 #NB get sha256 with: curl -sL <URL> | openssl sha256
 
@@ -11,7 +11,6 @@ source:
   sha256: {{ sha_value }}
   folder: src
   patches:
-    - fix-aniso-lugar-bounds.patch  # upstream bug: aniso_lugar declared dimension(7) but accessed at index 8
     - fix-idate-itime-flang.patch  # replace GNU idate/itime extensions with standard date_and_time
 
 build:
