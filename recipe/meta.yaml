@@ -14,7 +14,7 @@ source:
     - fix-idate-itime-flang.patch  # replace GNU idate/itime extensions with standard date_and_time
 
 build:
-  number: 4
+  number: 5
   ignore_run_exports_from:
     - vc14_runtime   # [win]
     - ucrt   # [win]
