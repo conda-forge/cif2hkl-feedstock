@@ -1,5 +1,5 @@
-{% set version = "1.5.0" %}
-{% set sha_value = "3ba5c5ceb2aeaae2c81a66f644fccf70d366b7ea73bc2e785626f7c434a4bed6" %}
+{% set version = "1.5.1" %}
+{% set sha_value = "af9e9ae83314a0f3dd4c07c2afbce189445ee82e70f5504bec64cf837ab7bc32" %}
 #NB get sha256 with: curl -sL <URL> | openssl sha256
 
 package:
@@ -10,11 +10,9 @@ source:
   url: https://gitlab.com/soleil-data-treatment/soleil-software-projects/cif2hkl/-/archive/v{{ version }}/cif2hkl-v{{ version }}.tar.gz
   sha256: {{ sha_value }}
   folder: src
-  patches:
-    - fix-idate-itime-flang.patch  # replace GNU idate/itime extensions with standard date_and_time
 
 build:
-  number: 5
+  number: 0
   ignore_run_exports_from:
     - vc14_runtime   # [win]
     - ucrt   # [win]
