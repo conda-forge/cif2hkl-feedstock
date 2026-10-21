@@ -11,6 +11,6 @@ docker_image:
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '14'
+- '15'
 target_platform:
 - linux-ppc64le
